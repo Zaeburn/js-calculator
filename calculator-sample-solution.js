@@ -2,13 +2,13 @@ var entries = [];
 var total = 0;
 
 var temp = '';
-$("button").on('click', function() {
- 	var val = $(this).text();
+("button").on('click', function() {
+ 	var val = (this).text();
 
   // Got a number, add to temp
   if (!isNaN(val) || val === '.') {
     temp += val;
-    $("#answer").val(temp.substring(0,10));
+    ("#answer").val(temp.substring(0,10));
     
   // Got some symbol other than equals, add temp to our entries
   // then add our current symbol and clear temp
@@ -16,12 +16,12 @@ $("button").on('click', function() {
     entries = [];
     temp = '';
     total = 0;
-    $("#answer").val('')
+    ("#answer").val('')
 
   // Clear last entry
   } else if (val === 'CE') {
     temp = '';
-    $("#answer").val('')
+    ("#answer").val('')
     
   // Change multiply symbol to work with eval
   } else if (val === 'x') {
@@ -57,7 +57,7 @@ $("button").on('click', function() {
       nt = Math.abs(nt) + '-';
     }
     
-    $("#answer").val(nt);
+    ("#answer").val(nt);
 		entries = [];
     temp = '';
     
